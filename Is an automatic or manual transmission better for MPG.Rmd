@@ -2,7 +2,7 @@
 title: "Is an Automatic or Manual Transmission better for MPG?"
 author: "Moh A"
 date: "03/03/2017"
-output: pdf_document
+output: html_document
 ---
 
 # Executive Summary
@@ -177,58 +177,3 @@ plot(improved_stepwise_model)
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 summary(improved_stepwise_model)
 ```
-<!-- #Conclusion -->
-
-
-
-
-<!-- ```{r, echo=TRUE, message=FALSE, warning=FALSE} -->
-<!-- library(ggplot2) -->
-<!-- library(dplyr) -->
-<!-- str(mtcars) -->
-<!-- summary(mtcars) -->
-<!-- head(mtcars) -->
-
-<!-- mtcars_dt <- mtcars -->
-<!-- mtcars_dt$cyl <- factor(mtcars$cyl) -->
-<!-- mtcars_dt$vs <- factor(mtcars$vs) -->
-<!-- mtcars_dt$am <- factor(mtcars$am) -->
-<!-- mtcars_dt$gear <- factor(mtcars$gear) -->
-<!-- mtcars_dt$carb <- factor(mtcars$carb) -->
-
-
-
-<!-- levels(mtcars_dt$am) <- c("Automatic", "Manual") -->
-<!-- levels(mtcars_dt$vs) <- c("V-engine", "Straight-engine") -->
-
-<!-- model3 <- lm(formula = mpg ~ wt + qsec +gear+ am +wt:qsec+ wt:am +gear:wt, data = mtcars) -->
-<!-- summary(model3) -->
-
-<!-- plot1 <- ggplot(mtcars_dt, aes(x= cyl, y= mpg, fill = cyl)) + geom_boxplot() + facet_grid(.~mtcars_dt$am) + ggtitle("MPG vs Number of Cylinder") + labs(fill = 'Number of Cylinders') + -->
-<!--     xlab('Number of Cylinders') + -->
-<!--     ylab('Miles /(US) gallon') -->
-
-<!-- plot2<-  ggplot(mtcars_dt, aes(x= disp, y= mpg,col= cyl) ) + geom_point() + facet_grid(.~mtcars_dt$am) + ggtitle("MPG vs Displacement") + labs(col = 'Number of Cylinders') + -->
-<!--     xlab('Displacement') + -->
-<!--     ylab('Miles /(US) gallon') -->
-
-<!-- plot3<-  ggplot(mtcars_dt, aes(x= hp, y= mpg,col= vs) ) + geom_point() + facet_grid(.~mtcars_dt$am) + ggtitle("MPG vs Horsepower") + labs(col = 'V-engine / S-engine') + -->
-<!--     xlab('Horsepower (hp)') + -->
-<!--     ylab('Miles /(US) gallon') -->
-
-<!-- plot4<-  ggplot(mtcars_dt, aes(x= wt, y= mpg,col= gear) ) + geom_point() + facet_grid(.~mtcars_dt$am) + ggtitle("MPG vs Weight") + labs(col = 'Gear') + -->
-<!--     xlab('Weight') + -->
-<!--     ylab('Miles /(US) gallon') -->
-<!-- ``` -->
-
-
-
-<!-- colorful plot for all variables using ggpairs: -->
-<!-- mtcarsFactors[,subsetColumns] %>% -->
-<!--     ggpairs( -->
-<!--         mapping = ggplot2::aes(color = am), -->
-<!--         upper = list(continuous = wrap("cor", size = 3)), -->
-<!--         lower = list(continuous = wrap("smooth", alpha=0.4, size=1), combo = wrap("dot")) -->
-<!--     ) -->
-
-
